@@ -9,7 +9,7 @@ These instructions will get you a copy of the project up and running on your loc
 - Python 2.7.0
 - Gensim (https://radimrehurek.com/gensim/install.html)
 
-## Installing
+## Installation
 ### Setup 
 #### Downloads a text file to train initial word2vec model. Use more data to increase accuracy.
 ```
