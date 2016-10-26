@@ -1,9 +1,23 @@
-While preparing for GRE, people often stumble into new words. They try to find their usage in sentences, but that takes a lot of time.
+# GRE_Word2vec_SmartSentenceGetter
+Get sentences for words based on their broad categories. Automatically categorizes the words in following categories - art, culture, fiction, news, business, sports, medicine, science, technology. Hits vocabulary.com (https://www.vocabulary.com/) API to get them using a GET call.
 
-This code has a python script that hits vocabulary.com server and fetches sentences for a word.
+## Getting Started
 
-PARAMETERS that can be tuned in the getSentencesForWords.py URL path:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-domain=F for fiction results, M for Science/Med, T for Technology, A for Arts/Culture, B for Business, send no paramters to get a mix of all
+### Prerequisites
+- Python 2.7.0
+- Gensim (https://radimrehurek.com/gensim/install.html)
 
-maxResults : number of sentences to get
+### Installing
+#### Setup 
+##### Downloads a text file to train initial word2vec model. Use more data to increase accuracy.
+```
+wget http://mattmahoney.net/dc/text8.zip -P /tmp
+unzip /tmp/text8.zip
+py word2vecModelGenerator.py
+```
+#### Runs trained word2vec model & hits server to fetch sentences
+```
+py getSmartSentencesForWords.py
+```
